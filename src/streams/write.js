@@ -10,7 +10,7 @@ const write = async () => {
     const writeStream = fs.createWriteStream(writeFile, 'utf-8');
     stdout.write('Write something: \n');
     stdin.on('data', (chunk) => {
-        writeStream.write(chunk + '\n');
+        writeStream.write(chunk);
     });
     stdin.on('end', () => {
         writeStream.end();
