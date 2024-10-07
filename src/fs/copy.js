@@ -21,8 +21,8 @@ const copy = async () => {
         if (error.code !== 'ENOENT') {
             throw error;
         }
-            await fs.promises.mkdir(copyPath);
-            await fs.promises.cp(path, copyPath, { recursive: true });
+        await fs.promises.mkdir(copyPath);
+        await fs.promises.cp(path, copyPath, { recursive: true });
     }
 };
 
